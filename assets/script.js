@@ -16,9 +16,9 @@ function updateQuantity(displayQuantity) {
     totalQuantity.textContent = displayQuantity;    
 }
 
-function updateQuantity(displayQuantity) {
-    let totalQuantity = document.querySelector("#qty-sugar");
-    totalQuantity.textContent = displayQuantity;    
+function updateQuantity3(displayQuantity3) {
+    let totalQuantity3 = document.querySelector("#qty-sugar");
+    totalQuantity3.textContent = displayQuantity3;    
 }
 
 function updateQuantity(displayQuantity) {
@@ -35,6 +35,8 @@ const ccPlusBtn = document.querySelector('#add-cc');
 const ccMinusBtn = document.querySelector('#minus-cc');
 
 let quantity = 0;
+let quantity3 = 0;
+
 
 // Code to update name display
 credit.textContent = `Created by ${"Rashad Gilliam"}`
@@ -55,3 +57,13 @@ gbPlusBtn.addEventListener('click', function (e) {
 
 ///////
 
+sugarMinusBtn.addEventListener('click', function (e) {
+    if (quantity3 > 0) {
+        quantity3--;
+        updateQuantity3(` ${quantity3}`)
+    }
+})
+sugarPlusBtn.addEventListener('click', function (e) {
+    quantity3++;
+    updateQuantity3(`${quantity3}`)
+})
