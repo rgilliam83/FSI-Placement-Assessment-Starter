@@ -25,7 +25,8 @@ function updateQuantity3(displayQuantity3) {
 
 function updateQuantity2(displayQuantity2) {
     let totalQuantity2 = document.querySelector("#qty-cc");
-    totalQuantity2.textContent = displayQuantity2;    
+    totalQuantity2.textContent = displayQuantity2;
+    totalDisp.textContent = overallTotal;    
 }
 
 // selecting the element with an id of add-gb
@@ -66,11 +67,13 @@ gbPlusBtn.addEventListener('click', function (e) {
 sugarMinusBtn.addEventListener('click', function (e) {
     if (quantity3 > 0) {
         quantity3--;
+        overallTotal--;
         updateQuantity3(` ${quantity3}`)
     }
 })
 sugarPlusBtn.addEventListener('click', function (e) {
     quantity3++;
+    overallTotal++;
     updateQuantity3(`${quantity3}`)
 })
 
@@ -79,11 +82,13 @@ sugarPlusBtn.addEventListener('click', function (e) {
 ccMinusBtn.addEventListener('click', function (e) {
     if (quantity2 > 0) {
         quantity2--;
+        overallTotal--;
         updateQuantity2(`${quantity2}`)
     }
 })
 
 ccPlusBtn.addEventListener('click', function (e) {
     quantity2++;
+    overallTotal++;
     updateQuantity2(`${quantity2}`)
 })
