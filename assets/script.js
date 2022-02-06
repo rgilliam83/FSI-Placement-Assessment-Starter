@@ -11,19 +11,19 @@ let sugar = 0; // Sugar Sprinkle
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit');
 
-function updateQuantity(displayQuantity) {
-    let totalQuantity = document.querySelector("#qty-gb");
-    totalQuantity.textContent = displayQuantity;    
+function updateQuantity1(displayQuantity1) {
+    let totalQuantity1 = document.querySelector("#qty-gb");
+    totalQuantity1.textContent = displayQuantity1;    
 }
 
-function updateQuantity(displayQuantity) {
-    let totalQuantity = document.querySelector("#qty-sugar");
-    totalQuantity.textContent = displayQuantity;    
+function updateQuantity3(displayQuantity3) {
+    let totalQuantity3 = document.querySelector("#qty-sugar");
+    totalQuantity3.textContent = displayQuantity3;    
 }
 
-function updateQuantity(displayQuantity) {
-    let totalQuantity = document.querySelector("#qty-gb");
-    totalQuantity.textContent = displayQuantity;    
+function updateQuantity2(displayQuantity2) {
+    let totalQuantity2 = document.querySelector("#qty-gb");
+    totalQuantity2.textContent = displayQuantity2;    
 }
 
 // selecting the element with an id of add-gb
