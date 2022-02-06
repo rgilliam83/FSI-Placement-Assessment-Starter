@@ -13,12 +13,14 @@ const credit = document.querySelector('#credit');
 
 function updateQuantity(displayQuantity) {
     let totalQuantity = document.querySelector("#qty-gb");
-    totalQuantity.textContent = displayQuantity;    
+    totalQuantity.textContent = displayQuantity;  
+    totalDisp.textContent = overallTotal;  
 }
 
 function updateQuantity3(displayQuantity3) {
     let totalQuantity3 = document.querySelector("#qty-sugar");
-    totalQuantity3.textContent = displayQuantity3;    
+    totalQuantity3.textContent = displayQuantity3; 
+    totalDisp.textContent = overallTotal;    
 }
 
 function updateQuantity2(displayQuantity2) {
@@ -33,11 +35,12 @@ const sugarPlusBtn = document.querySelector('#add-sugar');
 const sugarMinusBtn = document.querySelector('#minus-sugar');
 const ccPlusBtn = document.querySelector('#add-cc');
 const ccMinusBtn = document.querySelector('#minus-cc');
+const totalDisp = document.querySelector('#qty-total');
 
 let quantity = 0;
 let quantity2 = 0;
 let quantity3 = 0;
-
+let overallTotal = quantity + quantity2 + quantity3;
 
 // Code to update name display
 credit.textContent = `Created by ${"Rashad Gilliam"}`
@@ -46,11 +49,13 @@ credit.textContent = `Created by ${"Rashad Gilliam"}`
 gbMinusBtn.addEventListener('click', function (e) {
     if (quantity > 0) {
         quantity--;
+        overallTotal--;
         updateQuantity(` ${quantity}`)
     }
 })
 gbPlusBtn.addEventListener('click', function (e) {
     quantity++;
+    overallTotal++;
     updateQuantity(`${quantity}`);
 
 
