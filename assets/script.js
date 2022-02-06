@@ -1,5 +1,4 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
+
 // First, tell us your name
 let yourName = "Rashad Gilliam" // HINT: Replace this with your own name!
 
@@ -92,3 +91,5 @@ ccPlusBtn.addEventListener('click', function (e) {
     overallTotal++;
     updateQuantity2(`${quantity2}`)
 })
+
+/////
