@@ -92,4 +92,4 @@ ccPlusBtn.addEventListener('click', function (e) {
     updateQuantity2(`${quantity2}`)
 })
 
-/////
+//////
