@@ -32,28 +32,28 @@ function updateQuantity2(displayQuantity2) {
 const gbPlusBtn = document.querySelector('#add-gb');
 const gbMinusBtn = document.querySelector('#minus-gb');
 const sugarPlusBtn = document.querySelector('#add-sugar');
-const sugarMinusBtn = document.querySelector('#minus-sugar');
+const sugarMinusBtn = document.querySelector('#minus-sugar'); 
 const ccPlusBtn = document.querySelector('#add-cc');
 const ccMinusBtn = document.querySelector('#minus-cc');
 const totalDisp = document.querySelector('#qty-total');
 
 let quantity = 0;
-let quantity2 = 0;
+let quantity2 = 0; 
 let quantity3 = 0;
-let overallTotal = quantity + quantity2 + quantity3;
+let overallTotal = quantity + quantity2 + quantity3; 
 
 // Code to update name display
 credit.textContent = `Created by ${"Rashad Gilliam"}`
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
-gbMinusBtn.addEventListener('click', function (e) {
+gbMinusBtn.addEventListener('click', function () {
     if (quantity > 0) {
         quantity--;
         overallTotal--;
         updateQuantity(` ${quantity}`)
     }
 })
-gbPlusBtn.addEventListener('click', function (e) {
+gbPlusBtn.addEventListener('click', function () {
     quantity++;
     overallTotal++;
     updateQuantity(`${quantity}`);
@@ -63,14 +63,14 @@ gbPlusBtn.addEventListener('click', function (e) {
 
 ///////
 
-sugarMinusBtn.addEventListener('click', function (e) {
+sugarMinusBtn.addEventListener('click', function () {
     if (quantity3 > 0) {
         quantity3--;
         overallTotal--;
         updateQuantity3(` ${quantity3}`)
     }
 })
-sugarPlusBtn.addEventListener('click', function (e) {
+sugarPlusBtn.addEventListener('click', function () {
     quantity3++;
     overallTotal++;
     updateQuantity3(`${quantity3}`)
@@ -78,7 +78,7 @@ sugarPlusBtn.addEventListener('click', function (e) {
 
 ////////
 
-ccMinusBtn.addEventListener('click', function (e) {
+ccMinusBtn.addEventListener('click', function () {
     if (quantity2 > 0) {
         quantity2--;
         overallTotal--;
@@ -86,7 +86,7 @@ ccMinusBtn.addEventListener('click', function (e) {
     }
 })
 
-ccPlusBtn.addEventListener('click', function (e) {
+ccPlusBtn.addEventListener('click', function () {
     quantity2++;
     overallTotal++;
     updateQuantity2(`${quantity2}`)
